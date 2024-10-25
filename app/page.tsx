@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from "react";
 import Image from "next/image";
 
 const colorTheme = {
@@ -27,12 +30,25 @@ const colorTheme = {
   },
 }
 
-const theme = colorTheme["Classic Romance"];
+const themeNames = Object.keys(colorTheme)
 
 export default function Home() {
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0)
+  const theme = colorTheme[themeNames[currentThemeIndex]];
+
+  const handleThemeChange = (event) => {
+    setCurrentThemeIndex(themeNames.indexOf(event.target.value));
+  };
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]" style={{ backgroundColor: theme.background }}>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <select onChange={handleThemeChange} className="px-4 py-2 mb-5 rounded hover:border">
+          {themeNames.map((themeName, index) => (
+            <option key={index} value={themeName}>{themeName}</option>
+          ))}
+        </select>
+
         <section id="home" className="mb-16 w-full text-center bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1200/400')" }}>
           <div className="bg-white bg-opacity-90 p-8 shadow-md rounded">
             <h1 style={{ color: theme.primary }} className="text-4xl">Welcome to Our Website</h1>
