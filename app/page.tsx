@@ -2,17 +2,18 @@ import Image from "next/image";
 
 const primaryColor = "#8A9A5B";
 const secondaryColor = "#D4AF37";
-const backgroundColor = "#FFC0CB";
+const backgroundColor = "#FFFFF0";
+const accentColor = "#FFC0CB";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-[#FFFFF0]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]" style={{ backgroundColor }}>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <section id="home" className="mb-16 w-full text-center bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1200/400')" }}>
           <div className="bg-white bg-opacity-90 p-8 shadow-md rounded">
             <h1 style={{ color: primaryColor }} className="text-4xl">Welcome to Our Website</h1>
             <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec magna fermentum, a tincidunt nisi facilisis. Integer sit amet arcu vel arcu vehicula fermentum.</p>
-            <button className="mt-4 px-4 py-2 rounded hover:border-[#D4AF37]" style={{ backgroundColor, color: secondaryColor }}>Learn More</button>
+            <button className="mt-4 px-4 py-2 rounded hover:border-[#D4AF37]" style={{ backgroundColor: accentColor, color: secondaryColor }}>Learn More</button>
           </div>
         </section>
 
@@ -65,7 +66,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center p-4" style={{ backgroundColor }}>
+      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center p-4" style={{ backgroundColor: accentColor }}>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
