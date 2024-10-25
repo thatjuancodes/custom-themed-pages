@@ -1,78 +1,84 @@
 import Image from "next/image";
 
-const primaryColor = "#8A9A5B";
-const secondaryColor = "#D4AF37";
-const backgroundColor = "#FFFFF0";
-const accentColor = "#FFC0CB";
+const colorTheme = {
+  "Classic Romance": {
+    primary: "#8A9A5B",
+    secondary: "#D4AF37",
+    background: "#FFFFF0",
+    accent: "#FFC0CB",
+  }
+};
+
+const theme = colorTheme["Classic Romance"];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]" style={{ backgroundColor }}>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]" style={{ backgroundColor: theme.background }}>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <section id="home" className="mb-16 w-full text-center bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1200/400')" }}>
           <div className="bg-white bg-opacity-90 p-8 shadow-md rounded">
-            <h1 style={{ color: primaryColor }} className="text-4xl">Welcome to Our Website</h1>
-            <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec magna fermentum, a tincidunt nisi facilisis. Integer sit amet arcu vel arcu vehicula fermentum.</p>
-            <button className="mt-4 px-4 py-2 rounded hover:border" style={{ backgroundColor: accentColor, color: secondaryColor, borderColor: secondaryColor }}>Learn More</button>
+            <h1 style={{ color: theme.primary }} className="text-4xl">Welcome to Our Website</h1>
+            <p style={{ color: theme.primary }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec magna fermentum, a tincidunt nisi facilisis. Integer sit amet arcu vel arcu vehicula fermentum.</p>
+            <button className="mt-4 px-4 py-2 rounded hover:border" style={{ backgroundColor: theme.accent, color: theme.secondary, borderColor: theme.secondary }}>Learn More</button>
           </div>
         </section>
 
         <section id="about-us" className="mb-16 w-full p-8 shadow-md rounded bg-white">
-          <h2 className="text-3xl mb-4" style={{ color: secondaryColor }}>About Us</h2>
-          <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h2 className="text-3xl mb-4" style={{ color: theme.secondary }}>About Us</h2>
+          <p style={{ color: theme.primary }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
 
         <section id="services" className="mb-16 w-full p-8 shadow-md rounded bg-white">
-          <h2 className="text-3xl mb-4" style={{ color: secondaryColor }}>Services</h2>
+          <h2 className="text-3xl mb-4" style={{ color: theme.secondary }}>Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="card p-4 border rounded shadow" style={{ borderColor: primaryColor }}>
+            <div className="card p-4 border rounded shadow" style={{ borderColor: theme.primary }}>
               <Image src="https://picsum.photos/300/200" alt="Service 1" width={300} height={200} />
-              <h3 className="text-xl mt-2" style={{ color: primaryColor }}>Service 1</h3>
-              <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+              <h3 className="text-xl mt-2" style={{ color: theme.primary }}>Service 1</h3>
+              <p style={{ color: theme.primary }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
             </div>
-            <div className="card p-4 border rounded shadow" style={{ borderColor: primaryColor }}>
+            <div className="card p-4 border rounded shadow" style={{ borderColor: theme.primary }}>
               <Image src="https://picsum.photos/300/200" alt="Service 2" width={300} height={200} />
-              <h3 className="text-xl mt-2" style={{ color: primaryColor }}>Service 2</h3>
-              <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+              <h3 className="text-xl mt-2" style={{ color: theme.primary }}>Service 2</h3>
+              <p style={{ color: theme.primary }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
             </div>
-            <div className="card p-4 border rounded shadow" style={{ borderColor: primaryColor }}>
+            <div className="card p-4 border rounded shadow" style={{ borderColor: theme.primary }}>
               <Image src="https://picsum.photos/300/200" alt="Service 3" width={300} height={200} />
-              <h3 className="text-xl mt-2" style={{ color: primaryColor }}>Service 3</h3>
-              <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+              <h3 className="text-xl mt-2" style={{ color: theme.primary }}>Service 3</h3>
+              <p style={{ color: theme.primary }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
             </div>
           </div>
         </section>
 
         <section id="testimonials" className="mb-16 w-full p-8 shadow-md rounded bg-white">
-          <h2 className="text-3xl mb-4" style={{ color: secondaryColor }}>Testimonials</h2>
-          <blockquote className="border-l-4 pl-4 italic" style={{ borderColor: secondaryColor, color: primaryColor }}>
+          <h2 className="text-3xl mb-4" style={{ color: theme.secondary }}>Testimonials</h2>
+          <blockquote className="border-l-4 pl-4 italic" style={{ borderColor: theme.secondary, color: theme.primary }}>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
-            <cite className="block mt-2" style={{ color: primaryColor }}>- Someone Famous</cite>
+            <cite className="block mt-2" style={{ color: theme.primary }}>- Someone Famous</cite>
           </blockquote>
-          <blockquote className="border-l-4 pl-4 italic mt-4" style={{ borderColor: secondaryColor, color: primaryColor }}>
+          <blockquote className="border-l-4 pl-4 italic mt-4" style={{ borderColor: theme.secondary, color: theme.primary }}>
             "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-            <cite className="block mt-2" style={{ color: primaryColor }}>- Another Person</cite>
+            <cite className="block mt-2" style={{ color: theme.primary }}>- Another Person</cite>
           </blockquote>
         </section>
 
         <section id="contact-us" className="mb-16 w-full p-8 shadow-md rounded bg-white">
-          <h2 className="text-3xl mb-4" style={{ color: secondaryColor }}>Contact Us</h2>
+          <h2 className="text-3xl mb-4" style={{ color: theme.secondary }}>Contact Us</h2>
           <form className="grid grid-cols-1 gap-4">
-            <input type="text" placeholder="Name" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }} />
-            <input type="email" placeholder="Email" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }} />
-            <textarea placeholder="Message" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }}></textarea>
-            <button type="submit" className="px-4 py-2 rounded hover:border" style={{ backgroundColor: primaryColor, color: backgroundColor, borderColor: secondaryColor }}>Send Message</button>
+            <input type="text" placeholder="Name" className="p-2 border rounded" style={{ borderColor: theme.primary, backgroundColor: theme.background }} />
+            <input type="email" placeholder="Email" className="p-2 border rounded" style={{ borderColor: theme.primary, backgroundColor: theme.background }} />
+            <textarea placeholder="Message" className="p-2 border rounded" style={{ borderColor: theme.primary, backgroundColor: theme.background }}></textarea>
+            <button type="submit" className="px-4 py-2 rounded hover:border" style={{ backgroundColor: theme.primary, color: theme.background, borderColor: theme.secondary }}>Send Message</button>
           </form>
         </section>
       </main>
 
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center p-4" style={{ backgroundColor: accentColor }}>
+      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center p-4" style={{ backgroundColor: theme.accent }}>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: primaryColor }}
+          style={{ color: theme.primary }}
         >
           <Image
             aria-hidden
@@ -88,7 +94,7 @@ export default function Home() {
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: primaryColor }}
+          style={{ color: theme.primary }}
         >
           <Image
             aria-hidden
