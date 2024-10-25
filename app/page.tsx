@@ -13,7 +13,7 @@ export default function Home() {
           <div className="bg-white bg-opacity-90 p-8 shadow-md rounded">
             <h1 style={{ color: primaryColor }} className="text-4xl">Welcome to Our Website</h1>
             <p style={{ color: primaryColor }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec magna fermentum, a tincidunt nisi facilisis. Integer sit amet arcu vel arcu vehicula fermentum.</p>
-            <button className="mt-4 px-4 py-2 rounded hover:border-[#D4AF37]" style={{ backgroundColor: accentColor, color: secondaryColor }}>Learn More</button>
+            <button className="mt-4 px-4 py-2 rounded hover:border" style={{ backgroundColor: accentColor, color: secondaryColor, borderColor: secondaryColor }}>Learn More</button>
           </div>
         </section>
 
@@ -58,10 +58,10 @@ export default function Home() {
         <section id="contact-us" className="mb-16 w-full p-8 shadow-md rounded bg-white">
           <h2 className="text-3xl mb-4" style={{ color: secondaryColor }}>Contact Us</h2>
           <form className="grid grid-cols-1 gap-4">
-            <input type="text" placeholder="Name" className="p-2 border rounded bg-[#FFFFF0]" style={{ borderColor: primaryColor }} />
-            <input type="email" placeholder="Email" className="p-2 border rounded bg-[#FFFFF0]" style={{ borderColor: primaryColor }} />
-            <textarea placeholder="Message" className="p-2 border rounded bg-[#FFFFF0]" style={{ borderColor: primaryColor }}></textarea>
-            <button type="submit" className="px-4 py-2 rounded hover:border-[#D4AF37]" style={{ backgroundColor: primaryColor, color: "#FFFFF0" }}>Send Message</button>
+            <input type="text" placeholder="Name" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }} />
+            <input type="email" placeholder="Email" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }} />
+            <textarea placeholder="Message" className="p-2 border rounded" style={{ borderColor: primaryColor, backgroundColor }}></textarea>
+            <button type="submit" className="px-4 py-2 rounded hover:border" style={{ backgroundColor: primaryColor, color: backgroundColor, borderColor: secondaryColor }}>Send Message</button>
           </form>
         </section>
       </main>
