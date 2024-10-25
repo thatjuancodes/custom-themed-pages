@@ -6,8 +6,26 @@ const colorTheme = {
     secondary: "#D4AF37",
     background: "#FFFFF0",
     accent: "#FFC0CB",
-  }
-};
+  },
+  "Modern Minimalist": {
+    primary: "#F4D1D1",
+    secondary: "#D2B48C",
+    background: "#F2F2F2",
+    accent: "#4E5D6C",
+  },
+  "Bohemian Chic": {
+    primary: "#A3B18A",
+    secondary: "#E07A5F",
+    background: "#EDC9AF",
+    accent: "#FFF8E7",
+  },
+  "Vintage Glamour": {
+    primary: "#947E94",
+    secondary: "#484848",
+    background: "#F7E7CE",
+    accent: "#D4AF37",
+  },
+}
 
 const theme = colorTheme["Classic Romance"];
 
@@ -107,5 +125,5 @@ export default function Home() {
         </a>
       </footer> */}
     </div>
-  );
+  )
 }
